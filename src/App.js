@@ -1,15 +1,10 @@
-import { useState } from "react";
+import React from "react";
+import  { useState } from "react";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert";
 import Services from "./Components/Services";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//    Link
-// } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   const[mode,setMode] = useState('light')
   const[alert,setAlert] = useState(null)
@@ -47,26 +42,18 @@ function App() {
   }
   return (
    <> 
-   {/* <Router> */}
+    <Router> 
   <Navbar   title = "TextUtils"  aboutText = "Services" mode={mode} toggleMode = {toggleMode}/>
   {/* <Alert alert={alert}/> */}
   <div className="container my-3"> 
-  {/* <Switch>
-          <Route path="/Services">
-            <Services />
-          </Route> */}
+            <Routes>
+            <Route exact path="/Services" element={<Services mode={mode}/>}/>
+         
+          <Route exact path="/" element={<TextForm showAlert={showAlert} textAreaTitle="Enter your text" mode={mode}/>}/>
           
-          {/* <Route path="/"> */}
-          <TextForm showAlert={showAlert} textAreaTitle="Enter your text" mode={mode}/>
-            
-          {/* </Route> */}
-        {/* </Switch> */}
-        </div>
-        {/* </Router> */}
- {/* { <TextForm showAlert={showAlert} textAreaTitle="Enter your text" mode={mode}/> } */}
-     <Services mode={mode}/>  
- 
- 
+          </Routes>
+ </div>
+ </Router>
    </>
   );
 }
