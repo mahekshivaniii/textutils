@@ -64,7 +64,7 @@ function App() {
         </div>
         {/* </Router> */}
  {/* { <TextForm showAlert={showAlert} textAreaTitle="Enter your text" mode={mode}/> } */}
-    {/* <Services mode={mode}/>  */}
+     <Services mode={mode}/>  
  
  
    </>
