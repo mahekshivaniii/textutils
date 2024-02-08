@@ -44,7 +44,7 @@ function App() {
    <> 
     <Router> 
   <Navbar   title = "TextUtils"  aboutText = "Services" mode={mode} toggleMode = {toggleMode}/>
-  {/* <Alert alert={alert}/> */}
+  <Alert alert={alert}/> 
   <div className="container my-3"> 
             <Routes>
             <Route exact path="/Services" element={<Services mode={mode}/>}/>
