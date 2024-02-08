@@ -7,7 +7,7 @@ export default function TextForm(props) {
   //  console.log("UpperCase Clicked" + text)
    let newText = text.toUpperCase()
    setText(newText)
-   props.showAlert("helooo")
+  //  props.showAlert("helooo")
   }
   const handleOnChange = (event) => {
     // console.log("clicked")
@@ -28,11 +28,11 @@ export default function TextForm(props) {
   
   return (
     <>
-  <div className="mb-3" style={{color : props.mode == 'dark'?'white':'black'}}>
+  <div className="mb-3" style={{color : props.mode === 'dark'?'white':'black'}}>
     <label htmlFor="exampleFormControlTextarea1" className="form-label  fw-bold fst-italic fs-2">
       {props.textAreaTitle}
     </label>
-    <textarea style={{backgroundColor : props.mode == 'dark'?'grey':'white', color : props.mode == 'dark'?'white':'black'}}
+    <textarea style={{backgroundColor : props.mode === 'dark'?'grey':'white', color : props.mode === 'dark'?'white':'black'}}
     
       className="form-control"  placeholder='Enter the text please!' value={text}
       id="exampleFormControlTextarea1"  onChange={handleOnChange}
@@ -42,10 +42,10 @@ export default function TextForm(props) {
     <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert Text into UpperCase</button>
     <button className="btn btn-primary mx-3 " onClick={handleLowerClick}>Convert Text into LowerCase</button>
     <button className="btn btn-primary" onClick={clearEvent}>Clear</button>
-    <button className="btn btn-primary mx-3" >Make text Bold</button>
+    {/* <button className="btn btn-primary mx-3" >Make text Bold</button> */}
 
   </div>
-  <div className="container"style={{color : props.mode == 'dark'?'white':'black'}} >
+  <div className="container"style={{color : props.mode === 'dark'?'white':'black'}} >
        <h2>Your Text Summary</h2>
        <p >{text.split(" ").length} and {text.length}</p>
        <p>{ 0.08 *text.split(" ").length} minutes</p>
