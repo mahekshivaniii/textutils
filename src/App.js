@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 import  { useState } from "react";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
-import Alert from "./Components/Alert";
+import Alert from "./Components/Alert"
 
 function App() {
   const[mode,setMode] = useState('light')

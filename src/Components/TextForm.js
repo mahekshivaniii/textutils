@@ -39,9 +39,9 @@ export default function TextForm(props) {
       rows={8}
     
     />
-    <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert Text into UpperCase</button>
-    <button className="btn btn-primary mx-3 " onClick={handleLowerClick}>Convert Text into LowerCase</button>
-    <button className="btn btn-primary" onClick={clearEvent}>Clear</button>
+    <button className="btn btn-primary mx-4 my-3" onClick={handleUpClick}>Convert Text into UpperCase</button>
+    <button className="btn btn-primary mx-3 my-3" onClick={handleLowerClick}>Convert Text into LowerCase</button><br />
+    <button className="btn btn-primary mx-3" onClick={clearEvent}>Clear</button>
     {/* <button className="btn btn-primary mx-3" >Make text Bold</button> */}
 
   </div>
