@@ -40,14 +40,14 @@ export default function TextForm(props) {
     
     />
     <button className="btn btn-primary mx-4 my-3" onClick={handleUpClick}>Convert Text into UpperCase</button>
-    <button className="btn btn-primary mx-3 my-3" onClick={handleLowerClick}>Convert Text into LowerCase</button><br />
+    <button className="btn btn-primary mx-3 my-3" onClick={handleLowerClick}>Convert Text into LowerCase</button>
     <button className="btn btn-primary mx-3" onClick={clearEvent}>Clear</button>
     {/* <button className="btn btn-primary mx-3" >Make text Bold</button> */}
 
   </div>
   <div className="container"style={{color : props.mode === 'dark'?'white':'black'}} >
        <h2>Your Text Summary</h2>
-       <p >{text.split(" ").filter((element)=>{return element.length!=0}).length} and {text.length}</p>
+       <p >{text.split(" ").filter((element)=>{return element.length!==0}).length} and {text.length}</p>
        <p>{ 0.08 *text.split(" ").length} minutes</p>
        <h3>Preview</h3>
        <p>{text.length>0?text:`enter something `}</p>
