@@ -1,37 +1,43 @@
 import React ,{useState} from 'react'
 
 export default function Services(props) {
-    const[colorTheme,setTheme] = useState({
-        color:"black",
-        backgroundColor:"white"
-      })
-    const[btnText,setBtnText] = useState("Dark mode")
-       const  changeDark = () => {
-         if(colorTheme.color ==="black"){
-          setTheme({
-            color:"white",
-            backgroundColor:"black"
+    // const[colorTheme,setTheme] = useState({
+    //     color:"black",
+    //     backgroundColor:"white"
+    //   })
+    // const[btnText,setBtnText] = useState("Dark mode")
+      //  const  changeDark = () => {
+      //    if(colorTheme.color ==="black"){
+      //     setTheme({
+      //       color:"white",
+      //       backgroundColor:"black"
             
-          })
-          setBtnText("white mode")
-         }
-         else {
-          setTheme({
-            color:"black",
-            backgroundColor:"white"
+      //     })
+      //     setBtnText("white mode")
+      //    }
+      //    else {
+      //     setTheme({
+      //       color:"black",
+      //       backgroundColor:"white"
             
-          })
-          setBtnText("Dark mode")
-         }
-       } 
-      const myStyle ={
-        color: colorTheme.color,
-        backgroundColor:colorTheme.backgroundColor
+      //     })
+      //     setBtnText("Dark mode")
+      //    }
+      //  } 
+      // const myStyle ={
+      //   color: colorTheme.color,
+      //   backgroundColor:colorTheme.backgroundColor
       
-      };
+      // };
+      const myStyle = {
+        color:props.mode==="dark"?"white":"black",
+        backgroundColor:props.mode === "dark"?"#042743":"white",
+        border:'2px solid',
+        borderColor:props.mode === "dark" ? "#042743" : "white"
+      }
   return (
     <div className={`container ${props.mode}`}>
-    <h1 style={myStyle} className={`${props.mode}`} > About Us</h1>
+    <h1 style={{  color:props.mode==="dark"?"white":"black"}} className={`${props.mode}`} > About Us</h1>
   <div className="accordion" id="accordionExample">
 <div className="accordion-item">
 <h2 className="accordion-header">
