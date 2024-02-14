@@ -29,7 +29,7 @@ export default function TextForm(props) {
   return (
     <>
   <div className="mb-3" style={{color : props.mode === 'dark'?'white':'black'}}>
-    <label htmlFor="exampleFormControlTextarea1" className="form-label  fw-bold fst-italic fs-2 my-2">
+    <label htmlFor="exampleFormControlTextarea1" className="form-label  fw-bold fst-italic fs-2 mb-4">
       {props.textAreaTitle}
     </label>
     <textarea style={{backgroundColor : props.mode === 'dark'?'grey':'white', color : props.mode === 'dark'?'white':'black'}}
@@ -39,9 +39,9 @@ export default function TextForm(props) {
       rows={8}
     
     />
-    <button className="btn btn-primary mx-4 my-3" onClick={handleUpClick}>Convert Text into UpperCase</button>
-    <button className="btn btn-primary mx-3 my-3" onClick={handleLowerClick}>Convert Text into LowerCase</button>
-    <button className="btn btn-primary mx-3" onClick={clearEvent}>Clear</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-4 my-3" onClick={handleUpClick}>Convert Text into UpperCase</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-3 my-3" onClick={handleLowerClick}>Convert Text into LowerCase</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-3" onClick={clearEvent}>Clear</button>
     {/* <button className="btn btn-primary mx-3" >Make text Bold</button> */}
 
   </div>

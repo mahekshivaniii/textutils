@@ -26,7 +26,7 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor = 'grey'
       showAlert("success","Dark mode has been enabled")
-      document.title = 'textUtils.darkmode'
+      document.title = 'textUtils'
       setInterval(() =>{
         document.title = 'textutils mahek shivani'
       },2000)
