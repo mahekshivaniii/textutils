@@ -29,7 +29,7 @@ export default function TextForm(props) {
   return (
     <>
   <div className="mb-3" style={{color : props.mode === 'dark'?'white':'black'}}>
-    <label htmlFor="exampleFormControlTextarea1" className="form-label  fw-bold fst-italic fs-2">
+    <label htmlFor="exampleFormControlTextarea1" className="form-label  fw-bold fst-italic fs-2 my-2">
       {props.textAreaTitle}
     </label>
     <textarea style={{backgroundColor : props.mode === 'dark'?'grey':'white', color : props.mode === 'dark'?'white':'black'}}
